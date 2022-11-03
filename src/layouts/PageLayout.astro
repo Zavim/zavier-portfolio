@@ -1,0 +1,47 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main>
+      <div class="content-container">
+        <slot />
+      </div>
+    </main>
+    <!-- <Footer /> -->
+    <style is:global>
+      * {
+        margin: 0;
+      }
+      h1 {
+        padding: 1rem 0;
+      }
+      h2 {
+        padding: 1rem 0;
+      }
+      ul {
+        padding: 0;
+      }
+      li {
+        padding-bottom: 1rem;
+        list-style: none;
+      }
+    </style>
+    <style>
+      .content-container {
+        background-color: lightyellow;
+        border-radius: 10px;
+        max-width: 80vw;
+        margin: auto;
+        margin-top: 10vw;
+        word-break: break-word;
+      }
+    </style>
+  </body>
+</html>
