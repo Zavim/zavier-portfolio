@@ -1,0 +1,224 @@
+<script>
+  let showAbout = false;
+  let showExp = false;
+</script>
+
+{#if showAbout}
+  <div class="about-container">
+    <div class="close-container">
+      <button on:click={() => (showAbout = false)}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="hsl(331, 80%, 60%)"
+          width="1.25em"
+          height="1.25em"
+          viewBox="0 0 14 14"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="about-content">
+      <h1>About Zavier</h1>
+      <ul>
+        <li>Cleveland born and raised</li>
+        <li>In my free time, I love to sing and act in theatre</li>
+        <li>
+          I studied traditional illustration in high school but made a last
+          minute pivot toward engineering
+        </li>
+        <li>Animation is something I can talk endlessly about</li>
+        <li>I'd love to release a video game one day</li>
+      </ul>
+    </div>
+    <div class="learning-content">
+      <h1>What I'm Learning</h1>
+      <ul>
+        <li>3D Modeling</li>
+        <li>
+          WebGL using <a href="https://threejs.org/">three.js</a>&nbsp and
+          <a
+            href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
+            >react-three-fiber</a
+          >
+        </li>
+        <li>
+          <a href="https://www.rust-lang.org/">Rust!</a>&nbsp (very slowly)
+        </li>
+        <li>
+          <a href="https://webassembly.org/">WebAssembly!</a>&nbsp (even more
+          slowly)
+        </li>
+        <li>Digital Illustration</li>
+      </ul>
+    </div>
+  </div>
+{/if}
+
+{#if showExp}
+  <div class="experience-container">
+    <div class="close-container">
+      <button on:click={() => (showExp = false)}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="hsl(331, 80%, 60%)"
+          width="1.25em"
+          height="1.25em"
+          viewBox="0 0 14 14"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="projects-content">
+      <h1>Work Experience</h1>
+      <h2>Limelight Panels</h2>
+      <ul>
+        <li>
+          Created a React <a href="https://limelightcal.com/">webapp</a> &nbsp
+          to sync Cobot room bookings with Google Calendars at
+          <a href="https://limelightwork.com/">Limelight</a> &nbsp locations
+        </li>
+        <li>Built with Astro + React.</li>
+      </ul>
+      <h2>feverdream</h2>
+      <ul>
+        <li>
+          Created a <a href="https://fever-dream.vercel.app/">website</a> for
+          the artist residency program at
+          <a href="https://www.electricgardens.com/">Electric Gardens</a>
+        </li>
+        <li>Built with Astro + React.</li>
+        <li>
+          Adapted a Figma design to be responsive and created the mobile layout.
+        </li>
+        <li>
+          Also aided in creating the AI frame interpolated video on the homepage
+          (Tensorflow + Python).
+        </li>
+      </ul>
+      <h2>Acme Ballast Calculator</h2>
+      <ul>
+        <li>
+          Created a Python program that calculates minimum required ballast for
+          solar panel arrays.
+        </li>
+        <li>Created an exe with a simple UI for Windows.</li>
+        <li>Built with matplotlib, and shapely + decartes</li>
+      </ul>
+    </div>
+  </div>
+{/if}
+
+<ul class="button-list">
+  <li><button on:click={() => (showAbout = !showAbout)}>about</button></li>
+  <li><button on:click={() => (showExp = !showExp)}>experience</button></li>
+  <li>
+    <a href="https://github.com/Zavim">
+      <svg
+        viewBox="0 0 24 20"
+        width="1em"
+        height="1em"
+        color="hsl(331, 80%, 60%)"
+      >
+        <desc>Github logo</desc>
+        <path
+          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0
+    0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07
+    5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65
+    5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42
+    3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+
+<style>
+  .about-container {
+    top: -30vh;
+    left: -20vw;
+    height: 50vh;
+    max-width: 30rem;
+    z-index: 200;
+  }
+  .experience-container {
+    top: -35vh;
+    right: -21vw;
+    height: 80vh;
+    max-width: 45rem;
+    z-index: 300;
+    border-left: solid 1px hsl(331, 98%, 80%);
+  }
+  .about-container,
+  .experience-container {
+    position: absolute;
+    overflow-y: scroll;
+    background-color: hsl(60, 100%, 94%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0.25rem 0.25rem hsl(331, 60%, 40%);
+  }
+  .about-content {
+    padding-bottom: 1rem;
+  }
+  .about-content,
+  .learning-content,
+  .projects-content {
+    margin: auto;
+    word-break: break-word;
+  }
+  .close-container {
+    left: 92%;
+    position: sticky;
+    top: 0;
+    width: 2rem;
+    background-color: hsl(60, 100%, 94%);
+  }
+  .button-list {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  .button-list > li {
+    padding: 0 1rem;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    padding: 1rem 0;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    color: hsl(0, 0%, 0%);
+    border-radius: 5px;
+    box-shadow: 4px 4px hsl(331, 80%, 60%);
+    padding: 0.25em 0.5em;
+    transition: transform 0.1s ease-out;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 4px 4px hsl(331, 80%, 60%);
+    padding: 0.25em 0.5em;
+    transition: transform 0.1s ease-out;
+  }
+  a:hover,
+  button:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px hsl(331, 80%, 60%);
+  }
+  a:active,
+  button:active {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(331, 80%, 60%);
+  }
+</style>

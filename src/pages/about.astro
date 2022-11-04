@@ -1,75 +1,63 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <main>
-      <div class="about-content">
-        <h1>About Zavier</h1>
-        <ul>
-          <li>Cleveland born and raised</li>
-          <li>In my free time, I love to sing and act in theatre</li>
-          <li>
-            I studied traditional illustration in high school but made a last
-            minute pivot toward engineering
-          </li>
-          <li>Animation is something I can talk endlessly about</li>
-          <li>I'd love to release a video game one day</li>
-        </ul>
-      </div>
-      <div class="learning-content">
-        <h1>What I'm Learning</h1>
-        <ul>
-          <li>3D Modeling</li>
-          <li>
-            WebGL using <a href="https://threejs.org/">three.js</a> and <a
-              href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
-              >react-three-fiber</a
-            >
-          </li>
+<div class="about-content">
+  <h1>About Zavier</h1>
+  <ul>
+    <li>Cleveland born and raised</li>
+    <li>In my free time, I love to sing and act in theatre</li>
+    <li>
+      I studied traditional illustration in high school but made a last minute
+      pivot toward engineering
+    </li>
+    <li>Animation is something I can talk endlessly about</li>
+    <li>I'd love to release a video game one day</li>
+  </ul>
+</div>
+<div class="learning-content">
+  <h1>What I'm Learning</h1>
+  <ul>
+    <li>3D Modeling</li>
+    <li>
+      WebGL using <a href="https://threejs.org/">three.js</a> and <a
+        href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
+        >react-three-fiber</a
+      >
+    </li>
 
-          <li>
-            <a href="https://www.rust-lang.org/">Rust!</a> (very slowly)
-          </li>
-          <li>
-            <a href="https://webassembly.org/">WebAssembly!</a> (even more slowly)
-          </li>
-          <li>Digital Illustration</li>
-        </ul>
-      </div>
-    </main>
-    <!-- <Footer /> -->
-    <style is:global>
-      * {
-        margin: 0;
-      }
-    </style>
-    <style>
-      .about-content {
-        padding-bottom: 5rem;
-      }
-      .about-content,
-      .learning-content {
-        max-width: 42rem;
-        margin: auto;
-        word-break: break-word;
-      }
-      h1 {
-        padding: 1rem 0;
-      }
-      ul {
-        padding: 0;
-      }
-      li {
-        padding-bottom: 1rem;
-        list-style: none;
-      }
-    </style>
-  </body>
-</html>
+    <li>
+      <a href="https://www.rust-lang.org/">Rust!</a> (very slowly)
+    </li>
+    <li>
+      <a href="https://webassembly.org/">WebAssembly!</a> (even more slowly)
+    </li>
+    <li>Digital Illustration</li>
+  </ul>
+</div>
+<!-- <Footer /> -->
+<style is:global>
+  * {
+    margin: 0;
+  }
+</style>
+<style>
+  .about-content {
+    padding-bottom: 5rem;
+  }
+  .about-content,
+  .learning-content {
+    max-width: 42rem;
+    margin: auto;
+    word-break: break-word;
+  }
+  h1 {
+    padding: 1rem 0;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    padding-bottom: 1rem;
+    list-style: none;
+  }
+</style>

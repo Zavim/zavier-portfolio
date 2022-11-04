@@ -1,9 +1,10 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+// import Footer from "../components/Footer.astro";
 
 import FloatingStars from "../components/FloatingStars.jsx";
+import Popouts from "../components/popouts.svelte";
 ---
 
 <!DOCTYPE html>
@@ -18,35 +19,21 @@ import FloatingStars from "../components/FloatingStars.jsx";
         <div class="zavi-pic"></div>
         <h1>Zavier McLean</h1>
         <h2>frontend developer</h2>
-        <ul class="button-list">
-          <li>
-            <a href="https://github.com/Zavim">
-              <svg
-                viewBox="0 0 24 20"
-                width="1em"
-                height="1em"
-                color="hsl(331, 80%, 60%)"
-              >
-                <desc>Github logo</desc>
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0
-            0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07
-            5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65
-            5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42
-            3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                ></path>
-              </svg>
-            </a>
-          </li>
-          <li><a href="/about">about</a></li>
-          <li><a href="/experience">experience</a></li>
-        </ul>
+        <Popouts client:load />
       </div>
     </main>
     <!-- <Footer /> -->
+    <script></script>
+
     <style is:global>
       * {
         margin: 0;
+      }
+      h1 {
+        padding: 1rem 0 2rem;
+      }
+      h2 {
+        padding-bottom: 1.5rem;
       }
     </style>
     <style>
@@ -68,43 +55,9 @@ import FloatingStars from "../components/FloatingStars.jsx";
         margin: auto;
         word-break: break-word;
         /* height: 10rem; */
-        background-color: lightyellow;
+        background-color: hsl(60, 100%, 94%);
         border-radius: 10px;
-        /* box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25); */
         box-shadow: 0.25rem 0.25rem hsl(331, 60%, 40%);
-      }
-      .button-list {
-        display: flex;
-      }
-      h1 {
-        padding: 1rem 0 2rem;
-      }
-      h2 {
-        padding-bottom: 1.5rem;
-      }
-      ul {
-        padding: 0 0 1rem;
-      }
-      li {
-        padding: 1rem;
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        display: inline-block;
-        color: hsl(0, 0%, 0%);
-        border-radius: 5px;
-        box-shadow: 4px 4px hsl(331, 80%, 60%);
-        padding: 0.25em 0.5em;
-        transition: transform 0.1s ease-out;
-      }
-      a:hover {
-        transform: translate(4px, 4px);
-        box-shadow: 1px 1px hsl(331, 80%, 60%);
-      }
-      a:active {
-        color: hsl(0, 0%, 100%);
-        background-color: hsl(331, 80%, 60%);
       }
     </style>
   </body>
