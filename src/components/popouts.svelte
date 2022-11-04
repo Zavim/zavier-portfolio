@@ -38,18 +38,17 @@
       <ul>
         <li>3D Modeling</li>
         <li>
-          WebGL using <a href="https://threejs.org/">three.js</a>&nbsp and
+          WebGL using <a href="https://threejs.org/">three.js</a> and
           <a
             href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
             >react-three-fiber</a
           >
         </li>
         <li>
-          <a href="https://www.rust-lang.org/">Rust!</a>&nbsp (very slowly)
+          <a href="https://www.rust-lang.org/">Rust!</a>
         </li>
         <li>
-          <a href="https://webassembly.org/">WebAssembly!</a>&nbsp (even more
-          slowly)
+          <a href="https://webassembly.org/">WebAssembly!</a>
         </li>
         <li>Digital Illustration</li>
       </ul>
@@ -79,9 +78,9 @@
       <h2>Limelight Panels</h2>
       <ul>
         <li>
-          Created a React <a href="https://limelightcal.com/">webapp</a> &nbsp
+          Created a React <a href="https://limelightcal.com/">webapp</a>
           to sync Cobot room bookings with Google Calendars at
-          <a href="https://limelightwork.com/">Limelight</a> &nbsp locations
+          <a href="https://limelightwork.com/">Limelight</a> locations
         </li>
         <li>Built with Astro + React.</li>
       </ul>
@@ -121,8 +120,8 @@
     <a href="https://github.com/Zavim">
       <svg
         viewBox="0 0 24 20"
-        width="1em"
-        height="1em"
+        width="1.2em"
+        height="1.2em"
         color="hsl(331, 80%, 60%)"
       >
         <desc>Github logo</desc>
@@ -139,10 +138,28 @@
 </ul>
 
 <style>
+  @font-face {
+    font-family: "vulf mono italic";
+    src: url("../../fonts/mono/Vulf_Mono-Italic_web.ttf") format("truetype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "vulf mono regular";
+    src: url("../../fonts/mono/Vulf_Mono-Regular_web.ttf") format("truetype");
+    font-display: swap;
+  }
+  h1 {
+    padding: 0 0 0.5rem;
+  }
+  h2 {
+    padding-bottom: 0;
+  }
+
   .about-container {
     top: -30vh;
     left: -20vw;
     height: 50vh;
+    padding: 0 5vw;
     max-width: 30rem;
     z-index: 200;
   }
@@ -182,17 +199,20 @@
   .button-list {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
     padding-bottom: 2rem;
   }
   .button-list > li {
     padding: 0 1rem;
   }
   ul {
-    padding: 0;
+    padding: 0 0 1rem;
   }
   li {
     padding: 1rem 0;
     list-style: none;
+    font-family: "vulf mono regular";
   }
   a {
     text-decoration: none;
@@ -206,6 +226,8 @@
   button {
     border: none;
     background-color: transparent;
+    font-family: "vulf mono italic";
+    font-size: 0.9rem;
     border-radius: 5px;
     box-shadow: 4px 4px hsl(331, 80%, 60%);
     padding: 0.25em 0.5em;
@@ -220,5 +242,32 @@
   button:active {
     color: hsl(0, 0%, 100%);
     background-color: hsl(331, 80%, 60%);
+  }
+  .close-container > button {
+    font-size: 1rem;
+  }
+  .close-container > button:active {
+    background-color: hsl(60, 100%, 94%);
+  }
+
+  @media (max-width: 35em) {
+    .about-container {
+      /* max-width: 10rem; */
+      top: -38vh;
+      left: 0;
+      height: 40vh;
+    }
+    .experience-container {
+      max-width: 20rem;
+      top: -28vh;
+      right: 0;
+      border-left: none;
+      border-top: solid 1px hsl(331, 98%, 80%);
+    }
+    .about-content > ul > li,
+    .learning-content > ul > li,
+    .projects-content > ul > li {
+      line-height: 1.75rem;
+    }
   }
 </style>
