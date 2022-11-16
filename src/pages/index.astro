@@ -24,9 +24,8 @@ import Popouts from "../components/popouts.svelte";
 
     <style is:global>
       @font-face {
-        font-family: "vulf mono bold italic";
-        src: url("../../fonts/mono/Vulf_Mono-Bold_Italic_web.ttf")
-          format("truetype");
+        font-family: "vulf mono bold";
+        src: url("../../fonts/mono/Vulf_Mono-Bold_web.ttf") format("truetype");
         font-display: swap;
       }
       @font-face {
@@ -39,7 +38,7 @@ import Popouts from "../components/popouts.svelte";
       }
       h1 {
         padding: 1rem 0 2rem;
-        font-family: "vulf mono bold italic";
+        font-family: "vulf mono bold";
       }
       h2 {
         padding-bottom: 1.5rem;
@@ -72,7 +71,14 @@ import Popouts from "../components/popouts.svelte";
 
       @media (max-width: 35em) {
         .content-card {
-          max-width: 21rem;
+          max-width: 18rem;
+        }
+        .content-card > h1 {
+          font-size: 1.5rem;
+        }
+
+        .content-card > h2 {
+          font-size: 1.2rem;
         }
       }
     </style>

@@ -253,13 +253,15 @@
   @media (max-width: 35em) {
     .about-container {
       /* max-width: 10rem; */
-      top: -38vh;
+      top: -60%;
       left: 0;
-      height: 40vh;
+      height: 55vh;
     }
     .experience-container {
+      position: absolute;
       max-width: 20rem;
-      top: -28vh;
+      height: 70vh;
+      top: -95%;
       right: 0;
       border-left: none;
       border-top: solid 1px hsl(331, 98%, 80%);
@@ -268,6 +270,12 @@
     .learning-content > ul > li,
     .projects-content > ul > li {
       line-height: 1.75rem;
+    }
+    .close-container {
+      left: 85%;
+    }
+    button {
+      font-size: 0.74rem;
     }
   }
 </style>
