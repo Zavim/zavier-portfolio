@@ -154,7 +154,6 @@
   h2 {
     padding-bottom: 0;
   }
-
   .about-container {
     top: -30vh;
     left: -20vw;
@@ -165,7 +164,7 @@
   }
   .experience-container {
     top: -35vh;
-    right: -21vw;
+    right: -22vw;
     height: 80vh;
     max-width: 45rem;
     z-index: 300;
@@ -175,6 +174,7 @@
   .experience-container {
     position: absolute;
     overflow-y: scroll;
+    scrollbar-color: hsl(331, 80%, 60%) transparent;
     background-color: hsl(60, 100%, 94%);
     border-radius: 10px;
     padding: 1.5rem;
@@ -188,6 +188,9 @@
   .projects-content {
     margin: auto;
     word-break: break-word;
+  }
+  .projects-content h2 {
+    padding-top: 2rem;
   }
   .close-container {
     left: 92%;
@@ -242,6 +245,8 @@
   button:active {
     color: hsl(0, 0%, 100%);
     background-color: hsl(331, 80%, 60%);
+    box-shadow: none;
+    transform: translate(4px, 4px);
   }
   .close-container > button {
     font-size: 1rem;

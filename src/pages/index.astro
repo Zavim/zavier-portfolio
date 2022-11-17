@@ -4,6 +4,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 import FloatingStars from "../components/FloatingStars.jsx";
 import Popouts from "../components/popouts.svelte";
+
+let animate = true;
 ---
 
 <!DOCTYPE html>
@@ -44,12 +46,43 @@ import Popouts from "../components/popouts.svelte";
         padding-bottom: 1.5rem;
         font-family: "vulf mono italic";
       }
+      .animate-button {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        z-index: 100;
+        border: none;
+        background-color: hsl(60, 100%, 94%);
+        font-family: "vulf mono italic";
+        font-size: 0.9rem;
+        border-radius: 5px;
+        box-shadow: 4px 4px hsl(331, 60%, 40%);
+        padding: 0.25em 0.5em;
+        transition: transform 0.1s ease-out;
+      }
+      .animate-button:hover {
+        transform: translate(4px, 4px);
+        box-shadow: 1px 1px hsl(331, 80%, 60%);
+      }
+      .animate-button:active {
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(331, 80%, 60%);
+        box-shadow: none;
+        transform: translate(4px, 4px);
+      }
+
+      @media (max-width: 35em) {
+        .animate-button {
+          right: 10%;
+        }
+      }
     </style>
     <style>
       canvas {
         width: 100vw;
         height: 100vh;
         z-index: -9999;
+        overflow: hidden;
       }
       .content-card {
         position: absolute;
@@ -76,7 +109,6 @@ import Popouts from "../components/popouts.svelte";
         .content-card > h1 {
           font-size: 1.5rem;
         }
-
         .content-card > h2 {
           font-size: 1.2rem;
         }
