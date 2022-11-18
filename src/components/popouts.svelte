@@ -24,17 +24,17 @@
       <h1>About Zavier</h1>
       <ul>
         <li>Cleveland born and raised</li>
-        <li>In my free time, I love to sing and act in theatre</li>
+        <li>Theatre lover</li>
         <li>
-          I studied traditional illustration in high school but made a last
-          minute pivot toward engineering
+          Studied traditional illustration in high school but made a last minute
+          pivot to engineering
         </li>
-        <li>Animation is something I can talk endlessly about</li>
-        <li>I'd love to release a video game one day</li>
+        <li>Huge animation fan</li>
+        <li>Would love to release a video game one day</li>
       </ul>
     </div>
     <div class="learning-content">
-      <h1>What I'm Learning</h1>
+      <h1>Zavier is Learning</h1>
       <ul>
         <li>3D Modeling</li>
         <li>
@@ -45,7 +45,10 @@
           >
         </li>
         <li>
-          <a href="https://www.rust-lang.org/">Rust!</a>
+          <a href="https://www.typescriptlang.org/">TypeScript!</a>
+        </li>
+        <li>
+          <a href="https://www.assemblyscript.org/">AssemblyScript!</a>
         </li>
         <li>
           <a href="https://webassembly.org/">WebAssembly!</a>
@@ -82,7 +85,7 @@
           to sync Cobot room bookings with Google Calendars at
           <a href="https://limelightwork.com/">Limelight</a> locations
         </li>
-        <li>Built with Astro + React.</li>
+        <li>Built with Astro + React</li>
       </ul>
       <h2>feverdream</h2>
       <ul>
@@ -91,22 +94,22 @@
           the artist residency program at
           <a href="https://www.electricgardens.com/">Electric Gardens</a>
         </li>
-        <li>Built with Astro + React.</li>
+        <li>Built with Astro + React</li>
         <li>
-          Adapted a Figma design to be responsive and created the mobile layout.
+          Adapted a Figma design to be responsive and created the mobile layout
         </li>
         <li>
           Also aided in creating the AI frame interpolated video on the homepage
-          (Tensorflow + Python).
+          (Tensorflow + Python)
         </li>
       </ul>
       <h2>Acme Ballast Calculator</h2>
       <ul>
         <li>
           Created a Python program that calculates minimum required ballast for
-          solar panel arrays.
+          solar panel arrays
         </li>
-        <li>Created an exe with a simple UI for Windows.</li>
+        <li>Created an exe with a simple UI for Windows</li>
         <li>Built with matplotlib, and shapely + decartes</li>
       </ul>
     </div>
@@ -165,7 +168,7 @@
   .experience-container {
     top: -35vh;
     right: -22vw;
-    height: 80vh;
+    max-height: 80vh;
     max-width: 45rem;
     z-index: 300;
     border-left: solid 1px hsl(331, 98%, 80%);

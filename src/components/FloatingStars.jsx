@@ -21,11 +21,11 @@ function Star({ z, animate }) {
   useFrame((state, delta) => {
     if (animate) {
       starRef.current.rotation.set(
-        (data.rX += delta),
-        (data.rY += delta),
-        (data.rZ += delta)
+        (data.rX += delta / 2),
+        (data.rY += delta / 2),
+        (data.rZ += delta / 2)
       );
-      starRef.current.position.set(data.x * width, (data.y += delta), z);
+      starRef.current.position.set(data.x * width, (data.y += delta / 2), z);
       if (data.y > height) data.y = -height;
     }
   });
@@ -41,7 +41,7 @@ function Star({ z, animate }) {
   );
 }
 
-export default function FloatingStars({ count = 50, depth = 60 }) {
+export default function FloatingStars({ count = 50, depth = 45 }) {
   const [animate, setAnimate] = useState(true);
 
   const toggleAnimation = (animate) => {
@@ -50,8 +50,23 @@ export default function FloatingStars({ count = 50, depth = 60 }) {
 
   return (
     <>
-      <button class="animate-button" onClick={() => toggleAnimation(animate)}>
-        animations: {animate ? <span>on</span> : <span>off</span>}
+      <button
+        className="animate-button"
+        onClick={() => toggleAnimation(animate)}
+      >
+        <div className="animate-button-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 20"
+            width="1.5em"
+            height="1.5em"
+            transform="rotate(10)"
+          >
+            <desc>star icon</desc>
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+          {animate ? <span>playing</span> : <span>paused</span>}
+        </div>
       </button>
 
       <Canvas
