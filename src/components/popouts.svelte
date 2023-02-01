@@ -48,10 +48,7 @@
           <a href="https://www.typescriptlang.org/">TypeScript!</a>
         </li>
         <li>
-          <a href="https://www.assemblyscript.org/">AssemblyScript!</a>
-        </li>
-        <li>
-          <a href="https://webassembly.org/">WebAssembly!</a>
+          <a href="https://www.spacemacs.org/#">Spacemacs!</a>
         </li>
         <li>Digital Illustration</li>
       </ul>
@@ -81,8 +78,11 @@
       <h2>Limelight Panels</h2>
       <ul>
         <li>
-          Created a React <a href="https://limelightcal.com/">webapp</a>
-          to sync Cobot room bookings with Google Calendars at
+          Created <a href="https://limelightcal.com/tremont/zinnia"
+            >limelightcal.com</a
+          >
+          -- a React webapp that syncs Cobot room bookings with Google Calendars
+          at
           <a href="https://limelightwork.com/">Limelight</a> locations
         </li>
         <li>Built with Astro + React</li>
@@ -90,14 +90,14 @@
       <h2>feverdream</h2>
       <ul>
         <li>
-          Created a <a href="https://fever-dream.vercel.app/">website</a> for
-          the artist residency program at
+          Created a <a href="https://fever-dream.vercel.app/"
+            >website prototype</a
+          >
+          for the artist residency program at
           <a href="https://www.electricgardens.com/">Electric Gardens</a>
         </li>
+        <li>Adapted a Figma design to be responsive on desktop and mobile</li>
         <li>Built with Astro + React</li>
-        <li>
-          Adapted a Figma design to be responsive and created the mobile layout
-        </li>
         <li>
           Also aided in creating the AI frame interpolated video on the homepage
           (Tensorflow + Python)

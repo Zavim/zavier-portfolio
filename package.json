@@ -26,5 +26,8 @@
     "react-dom": "^18.2.0",
     "svelte": "^3.52.0",
     "three": "^0.145.0"
+  },
+  "devDependencies": {
+    "r3f-perf": "^7.0.1"
   }
 }

@@ -4,8 +4,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 import FloatingStars from "../components/FloatingStars.jsx";
 import Popouts from "../components/popouts.svelte";
-
-let animate = true;
 ---
 
 <!DOCTYPE html>
@@ -15,7 +13,7 @@ let animate = true;
   </head>
   <body>
     <main>
-      <FloatingStars client:load />
+      <FloatingStars client:only="react" />
       <div class="content-card">
         <div class="zavi-pic"></div>
         <h1>Zavier McLean</h1>

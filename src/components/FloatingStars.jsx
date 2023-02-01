@@ -1,8 +1,9 @@
 import * as THREE from "three";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, Environment } from "@react-three/drei";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
+import { Perf } from "r3f-perf";
 
 function Star({ z, animate }) {
   const starRef = useRef();
@@ -18,7 +19,7 @@ function Star({ z, animate }) {
     rZ: Math.random() * Math.PI,
   });
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (animate) {
       starRef.current.rotation.set(
         (data.rX += delta / 2),
@@ -74,6 +75,7 @@ export default function FloatingStars({ count = 50, depth = 45 }) {
         gl={{ alpha: false }}
         camera={{ near: 0.01, far: 110, fov: 40 }}
       >
+        <Perf />
         <color attach="background" args={["#fe9bcb"]} />
         <spotLight position={[10, 10, 10]} intensity={1} />
         <Suspense fallback={null}>
