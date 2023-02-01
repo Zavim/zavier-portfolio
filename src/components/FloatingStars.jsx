@@ -75,7 +75,7 @@ export default function FloatingStars({ count = 50, depth = 45 }) {
         gl={{ alpha: false }}
         camera={{ near: 0.01, far: 110, fov: 40 }}
       >
-        <Perf />
+        {/* <Perf /> */}
         <color attach="background" args={["#fe9bcb"]} />
         <spotLight position={[10, 10, 10]} intensity={1} />
         <Suspense fallback={null}>
