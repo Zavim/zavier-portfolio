@@ -14,7 +14,6 @@ function Star({ z, animate }) {
   const [data] = useState({
     x: THREE.MathUtils.randFloatSpread(2), //this creates a range between -+x/2
     // y: THREE.MathUtils.randFloatSpread(height),
-    // y: THREE.MathUtils.randFloat(0),
     y: height,
     rX: Math.random() * Math.PI,
     rY: Math.random() * Math.PI,
@@ -44,7 +43,7 @@ function Star({ z, animate }) {
   );
 }
 
-export default function FloatingStars({ count = 20, depth = 30 }) {
+export default function FloatingStars({ count = 15, depth = 30 }) {
   const [animate, setAnimate] = useState(true);
 
   const toggleAnimation = (animate) => {
