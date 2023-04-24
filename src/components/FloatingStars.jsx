@@ -42,7 +42,7 @@ function Star({ z, animate }) {
   );
 }
 
-export default function FloatingStars({ count = 30, depth = 30 }) {
+export default function FloatingStars({ count = 20, depth = 30 }) {
   const [animate, setAnimate] = useState(true);
 
   const toggleAnimation = (animate) => {
