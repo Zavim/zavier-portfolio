@@ -38,19 +38,37 @@
       <ul>
         <li>3D Modeling</li>
         <li>
-          WebGL using <a href="https://threejs.org/">three.js</a> and
+          WebGL --<a
+            href="https://threejs.org/"
+            target="_blank"
+            rel="noreferrer">three.js</a
+          >
+          &
           <a
             href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
-            >react-three-fiber</a
+            target="_blank"
+            rel="noreferrer">react-three-fiber</a
           >
         </li>
         <li>
-          <a href="https://www.typescriptlang.org/">TypeScript!</a>
+          <a
+            href="https://www.typescriptlang.org/"
+            target="_blank"
+            rel="noreferrer">TypeScript!</a
+          >
         </li>
         <li>
-          <a href="https://www.spacemacs.org/#">Spacemacs!</a>
+          <a href="https://www.spacemacs.org/#" target="_blank" rel="noreferrer"
+            >Spacemacs!</a
+          >
         </li>
-        <li>Digital Illustration</li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+            target="_blank"
+            rel="noreferrer">PWAs!</a
+          >
+        </li>
       </ul>
     </div>
   </div>
@@ -78,23 +96,33 @@
       <h2>Limelight Panels</h2>
       <ul>
         <li>
-          Created <a href="https://limelightcal.com/tremont/zinnia"
-            >limelightcal.com</a
+          Created <a
+            href="https://limelightcal.com/tremont/zinnia"
+            target="_blank"
+            rel="noreferrer">limelightcal.com</a
           >
           -- a React webapp that syncs Cobot room bookings with Google Calendars
           at
-          <a href="https://limelightwork.com/">Limelight</a> locations
+          <a href="https://limelightwork.com/" target="_blank" rel="noreferrer"
+            >Limelight</a
+          > locations
         </li>
         <li>Built with Astro + React</li>
       </ul>
       <h2>feverdream</h2>
       <ul>
         <li>
-          Created a <a href="https://fever-dream.vercel.app/"
-            >website prototype</a
+          Created a <a
+            href="https://fever-dream.vercel.app/"
+            target="_blank"
+            rel="noreferrer">website prototype</a
           >
           for the artist residency program at
-          <a href="https://www.electricgardens.com/">Electric Gardens</a>
+          <a
+            href="https://www.electricgardens.com/"
+            target="_blank"
+            rel="noreferrer">Electric Gardens</a
+          >
         </li>
         <li>Adapted a Figma design to be responsive on desktop and mobile</li>
         <li>Built with Astro + React</li>
@@ -120,7 +148,7 @@
   <li><button on:click={() => (showAbout = !showAbout)}>about</button></li>
   <li><button on:click={() => (showExp = !showExp)}>experience</button></li>
   <li>
-    <a href="https://github.com/Zavim">
+    <a href="https://github.com/Zavim" target="_blank" rel="noreferrer">
       <svg
         viewBox="0 0 24 20"
         width="1.2em"
