@@ -13,7 +13,9 @@ function Star({ z, animate }) {
 
   const [data] = useState({
     x: THREE.MathUtils.randFloatSpread(2), //this creates a range between -+x/2
-    y: THREE.MathUtils.randFloatSpread(height),
+    // y: THREE.MathUtils.randFloatSpread(height),
+    // y: THREE.MathUtils.randFloat(0),
+    y: height,
     rX: Math.random() * Math.PI,
     rY: Math.random() * Math.PI,
     rZ: Math.random() * Math.PI,
