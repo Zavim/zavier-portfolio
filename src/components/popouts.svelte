@@ -20,19 +20,6 @@
         </svg>
       </button>
     </div>
-    <div class="about-content">
-      <h1>About Zavier</h1>
-      <ul>
-        <li>Cleveland born and raised</li>
-        <li>Theatre lover</li>
-        <li>
-          Studied traditional illustration in high school but made a last minute
-          pivot to engineering
-        </li>
-        <li>Huge animation fan</li>
-        <li>Would love to release a video game one day</li>
-      </ul>
-    </div>
     <div class="learning-content">
       <h1>Zavier is Learning</h1>
       <ul>
@@ -69,6 +56,18 @@
             rel="noreferrer">PWAs!</a
           >
         </li>
+      </ul>
+    </div>
+    <div class="about-content">
+      <h1>About Zavier</h1>
+      <ul>
+        <li>Cleveland born and raised</li>
+        <li>
+          Wanted to be an animator but made a last minute pivot to study
+          computer science in college
+        </li>
+        <li>Huge animation fan</li>
+        <li>Would love to release a video game one day</li>
       </ul>
     </div>
   </div>

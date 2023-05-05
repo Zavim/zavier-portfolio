@@ -71,6 +71,7 @@ export default function FloatingStars({ count = 15, depth = 30 }) {
         </div>
       </button>
 
+      {/* <Suspense fallback={<div className="loading"></div>}> */}
       <Canvas
         style={{ width: "100vw", height: "100vh" }}
         gl={{ alpha: false }}
@@ -79,21 +80,20 @@ export default function FloatingStars({ count = 15, depth = 30 }) {
         {/* <Perf /> */}
         <color attach="background" args={["#fe9bcb"]} />
         <spotLight position={[10, 10, 10]} intensity={1} />
-        <Suspense fallback={null}>
-          <Environment preset="sunset" />
-          {Array.from({ length: count }, (_, i) => (
-            <Star key={i} z={(-i / count) * depth} animate={animate} />
-          ))}
-          <EffectComposer>
-            <DepthOfField
-              target={[0, 0, depth / 4]}
-              focalLength={1}
-              bokehScale={2}
-              height={700}
-            />
-          </EffectComposer>
-        </Suspense>
+        <Environment preset="sunset" />
+        {Array.from({ length: count }, (_, i) => (
+          <Star key={i} z={(-i / count) * depth} animate={animate} />
+        ))}
+        <EffectComposer>
+          <DepthOfField
+            target={[0, 0, depth / 4]}
+            focalLength={1}
+            bokehScale={2}
+            height={700}
+          />
+        </EffectComposer>
       </Canvas>
+      {/* </Suspense> */}
     </>
   );
 }
