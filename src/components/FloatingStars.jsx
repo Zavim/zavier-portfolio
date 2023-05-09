@@ -27,7 +27,7 @@ function Star({ z, animate }) {
         (data.rY += delta / 2),
         (data.rZ += delta / 2)
       );
-      starRef.current.position.set(data.x * width, (data.y += delta / 2), z);
+      starRef.current.position.set(data.x * width, (data.y += delta / 3), z);
       if (data.y > height) data.y = -height;
     }
   });
@@ -43,7 +43,7 @@ function Star({ z, animate }) {
   );
 }
 
-export default function FloatingStars({ count = 15, depth = 30 }) {
+export default function FloatingStars({ count = 20, depth = 30 }) {
   const [animate, setAnimate] = useState(true);
 
   const toggleAnimation = (animate) => {
@@ -86,11 +86,17 @@ export default function FloatingStars({ count = 15, depth = 30 }) {
         ))}
         <EffectComposer>
           <DepthOfField
+            focusDistance={1.5}
+            focalLength={1}
+            bokehScale={2}
+            // height={700}
+          />
+          {/* <DepthOfField
             target={[0, 0, depth / 4]}
             focalLength={1}
             bokehScale={2}
             height={700}
-          />
+          /> */}
         </EffectComposer>
       </Canvas>
       {/* </Suspense> */}

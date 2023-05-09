@@ -20,55 +20,65 @@
         </svg>
       </button>
     </div>
-    <div class="learning-content">
-      <h1>Zavier is Learning</h1>
-      <ul>
-        <li>3D Modeling</li>
-        <li>
-          WebGL --<a
-            href="https://threejs.org/"
-            target="_blank"
-            rel="noreferrer">three.js</a
-          >
-          &
-          <a
-            href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
-            target="_blank"
-            rel="noreferrer">react-three-fiber</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.typescriptlang.org/"
-            target="_blank"
-            rel="noreferrer">TypeScript!</a
-          >
-        </li>
-        <li>
-          <a href="https://www.spacemacs.org/#" target="_blank" rel="noreferrer"
-            >Spacemacs!</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
-            target="_blank"
-            rel="noreferrer">PWAs!</a
-          >
-        </li>
-      </ul>
-    </div>
     <div class="about-content">
       <h1>About Zavier</h1>
       <ul>
-        <li>Cleveland born and raised</li>
+        <li>I am a web engineer from Cleveland, Ohio!</li>
         <li>
-          Wanted to be an animator but made a last minute pivot to study
-          computer science in college
+          I leverage my fine arts background to create attractive and responsive
+          UIs with React and TypeScript.
         </li>
-        <li>Huge animation fan</li>
-        <li>Would love to release a video game one day</li>
+        <li>
+          In my free time I enjoy reading about cutting edge web tech and
+          browser-based 3D graphics.
+        </li>
+        <li>I would love to release a video game one day.</li>
       </ul>
+      <h1>Skills</h1>
+      <ul class="skills-list">
+        <li>JavaScript/TypeScript</li>
+        <li>Frontend Development</li>
+        <li>Representing REST API data in frontends</li>
+        <li>WebGL</li>
+        <li>Vite</li>
+        <li>Vercel</li>
+        <li>Node.js</li>
+        <li>Python</li>
+        <li>Git</li>
+        <li>Linux + command line</li>
+      </ul>
+    </div>
+    <div class="learning-content">
+      <h1>Currently Learning</h1>
+      <div class="learning-list">
+        <a href="https://www.blockbench.net/" target="_blank" rel="noreferrer"
+          >3D Modeling</a
+        >
+        <a
+          href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
+          target="_blank"
+          rel="noreferrer">react-three-fiber</a
+        >
+        <a href="https://dragonruby.org/" target="_blank" rel="noreferrer"
+          >Ruby</a
+        >
+        <a href="https://threejs.org/" target="_blank" rel="noreferrer"
+          >three.js</a
+        >
+        <a
+          href="https://www.typescriptlang.org/"
+          target="_blank"
+          rel="noreferrer">TypeScript</a
+        >
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+          target="_blank"
+          rel="noreferrer">PWAs</a
+        >
+        <a href="https://www.spacemacs.org/#" target="_blank" rel="noreferrer"
+          >Spacemacs</a
+        >
+      </div>
     </div>
   </div>
 {/if}
@@ -93,7 +103,7 @@
     <div class="projects-content">
       <h1>Work Experience</h1>
       <h2>Limelight Panels</h2>
-      <ul>
+      <ul class="experience-list">
         <li>
           Created <a
             href="https://limelightcal.com/tremont/zinnia"
@@ -106,38 +116,37 @@
             >Limelight</a
           > locations
         </li>
-        <li>Built with Astro + React</li>
+        <li><em>Built with Astro + React</em></li>
       </ul>
+      <hr />
       <h2>feverdream</h2>
-      <ul>
+      <ul class="experience-list">
         <li>
           Created a <a
             href="https://fever-dream.vercel.app/"
             target="_blank"
             rel="noreferrer">website prototype</a
           >
-          for the artist residency program at
-          <a
-            href="https://www.electricgardens.com/"
-            target="_blank"
-            rel="noreferrer">Electric Gardens</a
-          >
+          for the artist residency program at Electric Gardens
         </li>
         <li>Adapted a Figma design to be responsive on desktop and mobile</li>
-        <li>Built with Astro + React</li>
+        <li><em>Built with Astro + React</em></li>
         <li>
-          Also aided in creating the AI frame interpolated video on the homepage
-          (Tensorflow + Python)
+          Helped create AI generated homepage video
+          <br />
+          <br />
+          <em>Tensorflow + Python</em>
         </li>
       </ul>
+      <hr />
       <h2>Acme Ballast Calculator</h2>
-      <ul>
+      <ul class="experience-list">
         <li>
           Created a Python program that calculates minimum required ballast for
           solar panel arrays
         </li>
         <li>Created an exe with a simple UI for Windows</li>
-        <li>Built with matplotlib, and shapely + decartes</li>
+        <li><em>Built with matplotlib, and shapely + decartes</em></li>
       </ul>
     </div>
   </div>
@@ -179,6 +188,7 @@
     font-display: swap;
   }
   h1 {
+    font-size: 28px;
     padding: 0 0 0.5rem;
   }
   h2 {
@@ -191,6 +201,16 @@
     padding: 0 5vw;
     max-width: 30rem;
     z-index: 200;
+  }
+  .skills-list > li {
+    padding: 0.5rem 0 0;
+  }
+  .learning-list {
+    line-height: 1.5;
+    font-family: "vulf mono regular";
+  }
+  .learning-list > a {
+    margin-top: 6px;
   }
   .experience-container {
     top: -35vh;
@@ -229,6 +249,12 @@
     width: 2rem;
     background-color: hsl(60, 100%, 94%);
   }
+  .close-container > button {
+    position: absolute;
+    background-color: hsl(60, 100%, 94%);
+    /* border-radius: 5px; */
+    padding: 0 0.25em;
+  }
   .button-list {
     display: flex;
     align-items: center;
@@ -240,12 +266,24 @@
     padding: 0 1rem;
   }
   ul {
-    padding: 0 0 1rem;
+    padding: 0 0rem 1rem;
   }
   li {
     padding: 1rem 0;
     list-style: none;
     font-family: "vulf mono regular";
+  }
+  .experience-list {
+    padding: 0 1rem 1rem;
+  }
+  .experience-list > li {
+    list-style-type: disc;
+  }
+  .experience-list > li::marker {
+    color: hsl(331, 80%, 60%);
+  }
+  hr {
+    color: hsl(331, 80%, 60%);
   }
   a {
     text-decoration: none;
@@ -268,8 +306,13 @@
   }
   a:hover,
   button:hover {
+    /* border: 1px hsl(331, 80%, 60%);
+    border-radius: 5px; */
+    background-color: hsl(27, 100%, 94%);
     transform: translate(4px, 4px);
-    box-shadow: 1px 1px hsl(331, 80%, 60%);
+    outline: 1px solid hsl(331, 80%, 60%);
+    /* box-shadow: 1px 1px hsl(331, 80%, 60%); */
+    box-shadow: none;
   }
   a:active,
   button:active {
@@ -302,12 +345,16 @@
       border-top: solid 1px hsl(331, 98%, 80%);
     }
     .about-content > ul > li,
-    .learning-content > ul > li,
     .projects-content > ul > li {
       line-height: 1.75rem;
     }
     .close-container {
-      left: 85%;
+      left: 90%;
+      position: sticky;
+      top: 95%;
+    }
+    .close-container > button {
+      position: relative;
     }
     button {
       font-size: 0.74rem;

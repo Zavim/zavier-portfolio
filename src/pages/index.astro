@@ -6,131 +6,162 @@ import FloatingStars from "../components/FloatingStars.jsx";
 import Popouts from "../components/popouts.svelte";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <main>
-      <FloatingStars client:only="react" />
-      <div class="content-card">
-        <div class="zavi-pic"></div>
-        <h1>Zavier McLean</h1>
-        <h2>frontend developer</h2>
-        <Popouts client:load />
-      </div>
-    </main>
+<!-- <svg>
+  <filter id="grainy2">
+    <feTurbulence type="turbulence" baseFrequency="0.65"></feTurbulence>
+  </filter>
+</svg> -->
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
-    <style is:global>
-      @font-face {
-        font-family: "vulf mono bold";
-        src: url("../../fonts/mono/Vulf_Mono-Bold_web.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "vulf mono italic";
-        src: url("../../fonts/mono/Vulf_Mono-Italic_web.ttf") format("truetype");
-        font-display: swap;
-      }
-      * {
-        margin: 0;
-      }
-      body {
-        line-height: 1.5em;
-        background-color: hsl(331, 98%, 80%);
-      }
-      h1 {
-        line-height: 1.2em;
-        padding: 1rem 0 2rem;
-        font-family: "vulf mono bold";
-      }
-      h2 {
-        padding-bottom: 1.5rem;
-        font-family: "vulf mono italic";
-      }
-      .loading {
-        position: absolute;
-        z-index: -1;
-        background-color: hsl(331, 98%, 80%);
-        height: 100vh;
-        height: 100svh;
-        width: 100vw;
-      }
-      .animate-button {
-        position: absolute;
-        top: 5%;
-        right: 5%;
-        z-index: 100;
-        border: none;
-        background-color: hsl(60, 100%, 94%);
-        font-family: "vulf mono italic";
-        font-size: 0.9rem;
-        border-radius: 5px;
-        box-shadow: 4px 4px hsl(331, 60%, 40%);
-        padding: 0.25em 0.5em;
-        transition: transform 0.1s ease-out;
-      }
-      .animate-button:hover {
-        transform: translate(4px, 4px);
-        box-shadow: 1px 1px hsl(331, 80%, 60%);
-      }
-      .animate-button:active {
-        color: hsl(0, 0%, 100%);
-        background-color: hsl(331, 80%, 60%);
-        box-shadow: none;
-        transform: translate(4px, 4px);
-      }
-      .animate-button-text {
-        display: flex;
-        align-items: center;
-      }
-      .animate-button-text svg {
-        padding: 0.25em 0.5em;
-      }
+<main>
+  <div class="content-card">
+    <div class="zavi-pic"></div>
+    <h1>Zavier McLean</h1>
+    <h3>Web Engineer</h3>
+    <Popouts client:load />
+  </div>
+  <!-- <div class="grainy-container"> -->
+  <FloatingStars client:only="react" />
+  <!-- </div> -->
+</main>
 
-      @media (max-width: 35em) {
-        .animate-button {
-          right: 10%;
-        }
-      }
-    </style>
-    <style>
-      canvas {
-        width: 100vw;
-        height: 100vh;
-        z-index: -9999;
-        overflow: hidden;
-      }
-      .content-card {
-        position: absolute;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        left: 0;
-        right: 0;
-        top: 40%;
-        max-width: 24rem;
-        margin: auto;
-        word-break: break-word;
-        background-color: hsl(60, 100%, 94%);
-        border-radius: 10px;
-        box-shadow: 0.25rem 0.25rem hsl(331, 60%, 40%);
-        padding: 0.6rem;
-      }
+<!-- <svg>
+  <filter id="grainy">
+    <feTurbulence type="fractalNoise" baseFrequency="0.6" stitchTiles="stitch"
+    ></feTurbulence>
+    <feColorMatrix
+      in="colorNoise"
+      type="matrix"
+      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"></feColorMatrix>
+    <feComposite operator="in" in2="SourceGraphic" result="monoNoise"
+    ></feComposite>
+    <feBlend in="SourceGraphic" in2="monoNoise" mode="screen"></feBlend>
+  </filter>
+</svg> -->
 
-      @media (max-width: 35em) {
-        .content-card {
-          max-width: 18rem;
-        }
-        .content-card > h1 {
-          font-size: 1.5rem;
-        }
-        .content-card > h2 {
-          font-size: 1.2rem;
-        }
-      }
-    </style>
-  </body>
-</html>
+<style is:global>
+  @font-face {
+    font-family: "vulf mono bold";
+    src: url("../../fonts/mono/Vulf_Mono-Bold_web.ttf") format("truetype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "vulf mono italic";
+    src: url("../../fonts/mono/Vulf_Mono-Italic_web.ttf") format("truetype");
+    font-display: swap;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5em;
+    /* background-color: hsl(331, 98%, 80%); */
+    /* background: url("data:image/svg+xml;base64,PHN2Zz4KICAgIDxmaWx0ZXIgaWQ9ImdyYWlueSI+CiAgICAgICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjY1IiAvPgogICAgPC9maWx0ZXI+Cjwvc3ZnPg=="); */
+  }
+  body::before,
+  body::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 30%;
+  }
+  body::before {
+    background: hsl(331, 98%, 80%);
+    /* background: #8c8c8c; */
+  }
+  h1 {
+    line-height: 1.2em;
+    padding: 1rem 0 2rem;
+    font-family: "vulf mono bold";
+  }
+  h2,
+  h3 {
+    padding-bottom: 1.5rem;
+    font-family: "vulf mono italic";
+  }
+  /* .grainy-container {
+    height: 100vh;
+    height: 100svh;
+    width: 100vw;
+  } */
+  .animate-button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 100;
+    border: none;
+    background-color: hsl(60, 100%, 94%);
+    font-family: "vulf mono italic";
+    font-size: 0.9rem;
+    border-radius: 5px;
+    box-shadow: 4px 4px hsl(331, 60%, 40%);
+    padding: 0.25em 0.5em;
+    transition: transform 0.1s ease-out;
+  }
+  .animate-button:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px hsl(331, 80%, 60%);
+  }
+  .animate-button:active {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(331, 80%, 60%);
+    box-shadow: none;
+    transform: translate(4px, 4px);
+  }
+  .animate-button-text {
+    display: flex;
+    align-items: center;
+  }
+  .animate-button-text svg {
+    padding: 0.25em 0.5em;
+  }
+
+  @media (max-width: 35em) {
+    .animate-button {
+      right: 10%;
+    }
+  }
+</style>
+<style>
+  canvas {
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    z-index: -9999;
+    overflow: hidden;
+  }
+  .content-card {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    top: 40%;
+    max-width: 24rem;
+    margin: auto;
+    word-break: break-word;
+    background-color: hsl(60, 100%, 94%);
+    border-radius: 10px;
+    box-shadow: 0.25rem 0.25rem hsl(331, 60%, 40%);
+    padding: 0.6rem;
+  }
+
+  @media (max-width: 35em) {
+    .content-card {
+      max-width: 18rem;
+    }
+    .content-card > h1 {
+      font-size: 1.5rem;
+    }
+    .content-card > h2 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
