@@ -252,8 +252,8 @@
   .close-container > button {
     position: absolute;
     background-color: hsl(60, 100%, 94%);
-    /* border-radius: 5px; */
-    padding: 0 0.25em;
+    border-radius: 5px;
+    padding: 0 0.25em 0;
   }
   .button-list {
     display: flex;
@@ -349,7 +349,7 @@
       line-height: 1.75rem;
     }
     .close-container {
-      left: 90%;
+      left: 95%;
       position: sticky;
       top: 95%;
     }
