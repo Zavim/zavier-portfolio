@@ -12,7 +12,7 @@
           stroke="hsl(331, 80%, 60%)"
           width="1.25em"
           height="1.25em"
-          viewBox="0 0 14 14"
+          viewBox="0 0 16 12"
         >
           <path
             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
@@ -33,7 +33,19 @@
           browser-based 3D graphics.
         </li>
         <li>I would love to release a video game one day.</li>
+        <li>
+          Feel free to <a
+            href="mailto:zavier.mclean@tutanota.com"
+            target="_blank"
+            rel="noreferrer"
+            class="link"
+            style="margin-bottom: 1rem;"
+          >
+            <span style="font-family: 'vulf mono regular'">contact me!</span>
+          </a>
+        </li>
       </ul>
+
       <h1>Skills</h1>
       <ul class="skills-list">
         <li>JavaScript/TypeScript</li>
@@ -51,32 +63,47 @@
     <div class="learning-content">
       <h1>Currently Learning</h1>
       <div class="learning-list">
-        <a href="https://www.blockbench.net/" target="_blank" rel="noreferrer"
-          >3D Modeling</a
+        <a
+          href="https://www.blockbench.net/"
+          target="_blank"
+          rel="noreferrer"
+          class="link">3D Modeling</a
         >
         <a
           href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
           target="_blank"
-          rel="noreferrer">react-three-fiber</a
+          rel="noreferrer"
+          class="link">react-three-fiber</a
         >
-        <a href="https://dragonruby.org/" target="_blank" rel="noreferrer"
-          >Ruby</a
+        <a
+          href="https://dragonruby.org/"
+          target="_blank"
+          rel="noreferrer"
+          class="link">Ruby</a
         >
-        <a href="https://threejs.org/" target="_blank" rel="noreferrer"
-          >three.js</a
+        <a
+          href="https://threejs.org/"
+          target="_blank"
+          rel="noreferrer"
+          class="link">three.js</a
         >
         <a
           href="https://www.typescriptlang.org/"
           target="_blank"
-          rel="noreferrer">TypeScript</a
+          rel="noreferrer"
+          class="link">TypeScript</a
         >
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
           target="_blank"
-          rel="noreferrer">PWAs</a
+          rel="noreferrer"
+          class="link">PWAs</a
         >
-        <a href="https://www.spacemacs.org/#" target="_blank" rel="noreferrer"
-          >Spacemacs</a
+        <a
+          href="https://www.spacemacs.org/#"
+          target="_blank"
+          rel="noreferrer"
+          class="link">Spacemacs</a
         >
       </div>
     </div>
@@ -92,7 +119,7 @@
           stroke="hsl(331, 80%, 60%)"
           width="1.25em"
           height="1.25em"
-          viewBox="0 0 14 14"
+          viewBox="0 0 16 12"
         >
           <path
             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
@@ -103,31 +130,42 @@
     <div class="projects-content">
       <h1>Work Experience</h1>
       <h2>Limelight Panels</h2>
+      <a
+        href="https://limelightcal.com/tremont/zinnia"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="/images/rooms.jpg"
+          alt="screenshot of limelight booking website"
+        />
+      </a>
       <ul class="experience-list">
         <li>
-          Created <a
-            href="https://limelightcal.com/tremont/zinnia"
-            target="_blank"
-            rel="noreferrer">limelightcal.com</a
-          >
-          -- a React webapp that syncs Cobot room bookings with Google Calendars
-          at
+          Created limelightcal.com, a React webapp that syncs Cobot room
+          bookings with Google Calendars at
           <a href="https://limelightwork.com/" target="_blank" rel="noreferrer"
-            >Limelight</a
+            ><em>Limelight</em></a
           > locations
         </li>
         <li><em>Built with Astro + React</em></li>
       </ul>
       <hr />
       <h2>feverdream</h2>
+      <a
+        href="https://fever-dream.vercel.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="/images/feverdream.jpg"
+          alt="screenshot of feverdream website"
+        />
+      </a>
       <ul class="experience-list">
         <li>
-          Created a <a
-            href="https://fever-dream.vercel.app/"
-            target="_blank"
-            rel="noreferrer">website prototype</a
-          >
-          for the artist residency program at Electric Gardens
+          Created a website prototype for the artist residency program at
+          Electric Gardens
         </li>
         <li>Adapted a Figma design to be responsive on desktop and mobile</li>
         <li><em>Built with Astro + React</em></li>
@@ -156,14 +194,19 @@
   <li><button on:click={() => (showAbout = !showAbout)}>about</button></li>
   <li><button on:click={() => (showExp = !showExp)}>experience</button></li>
   <li>
-    <a href="https://github.com/Zavim" target="_blank" rel="noreferrer">
+    <a
+      href="https://github.com/Zavim"
+      target="_blank"
+      rel="noreferrer"
+      class="link"
+    >
       <svg
         viewBox="0 0 24 20"
         width="1.2em"
         height="1.2em"
         color="hsl(331, 80%, 60%)"
       >
-        <desc>Github logo</desc>
+        <desc>GitHub logo</desc>
         <path
           d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0
     0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07
@@ -186,6 +229,10 @@
     font-family: "vulf mono regular";
     src: url("../../fonts/mono/Vulf_Mono-Regular_web.ttf") format("truetype");
     font-display: swap;
+  }
+  a {
+    color: hsl(331, 60%, 40%);
+    text-decoration: none;
   }
   h1 {
     font-size: 28px;
@@ -285,7 +332,7 @@
   hr {
     color: hsl(331, 80%, 60%);
   }
-  a {
+  .link {
     text-decoration: none;
     display: inline-block;
     color: hsl(0, 0%, 0%);
@@ -304,8 +351,8 @@
     padding: 0.25em 0.5em;
     transition: transform 0.1s ease-out;
   }
-  a:hover,
-  button:hover {
+  button:hover,
+  .link:hover {
     /* border: 1px hsl(331, 80%, 60%);
     border-radius: 5px; */
     background-color: hsl(27, 100%, 94%);
@@ -314,12 +361,15 @@
     /* box-shadow: 1px 1px hsl(331, 80%, 60%); */
     box-shadow: none;
   }
-  a:active,
-  button:active {
+  button:active,
+  .link:active {
     color: hsl(0, 0%, 100%);
     background-color: hsl(331, 80%, 60%);
     box-shadow: none;
     transform: translate(4px, 4px);
+  }
+  a > img:hover {
+    outline: 3px solid hsl(331, 80%, 60%);
   }
   .close-container > button {
     font-size: 1rem;
