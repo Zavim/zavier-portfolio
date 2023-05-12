@@ -49,8 +49,8 @@
       <h1>Skills</h1>
       <ul class="skills-list">
         <li>JavaScript/TypeScript</li>
-        <li>Frontend Development</li>
-        <li>Representing REST API data in frontends</li>
+        <li>React, Svelte, HTML, CSS</li>
+        <li>Consuming REST API data</li>
         <li>WebGL</li>
         <li>Vite</li>
         <li>Vercel</li>
