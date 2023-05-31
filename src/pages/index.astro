@@ -55,6 +55,7 @@ import Popouts from "../components/popouts.svelte";
   }
   body {
     line-height: 1.5em;
+    height: 100%;
     /* background-color: #fe9bcb; */
     /* background: url("data:image/svg+xml;base64,PHN2Zz4KICAgIDxmaWx0ZXIgaWQ9ImdyYWlueSI+CiAgICAgICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjY1IiAvPgogICAgPC9maWx0ZXI+Cjwvc3ZnPg=="); */
   }
@@ -64,8 +65,9 @@ import Popouts from "../components/popouts.svelte";
     left: 0;
     top: 0;
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    /* height: 100dvh; */
     z-index: 1;
     opacity: 30%;
   }
