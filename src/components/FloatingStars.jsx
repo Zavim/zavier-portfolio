@@ -42,15 +42,15 @@ import { Perf } from "r3f-perf";
 //   );
 // }
 
-function Stars({ count, depth, animate }) {
+function Stars({ depth, animate }) {
   const { nodes, materials } = useGLTF("/kirbyStar-transformed.glb");
-  const { viewport, camera } = useThree();
+  const { size, viewport, camera } = useThree();
+  const count = Math.round(size.width / 35);
   let data = [];
   for (let i = 0; i < count; i++) {
     const z = (-i / count) * depth;
     const { width, height } = viewport.getCurrentViewport(camera, [0, 0, z]);
     data.push({
-      random: Math.random(),
       position: [0, 0, z],
       width: width,
       height: height,
@@ -73,7 +73,7 @@ function Stars({ count, depth, animate }) {
   );
 }
 
-function Star({ random, animate, ...props }) {
+function Star({ animate, ...props }) {
   const height = props.height;
   const width = props.width;
   const z = props.z;
@@ -141,14 +141,14 @@ export default function FloatingStars({ count = 50, depth = 30 }) {
         camera={{ near: 0.01, far: 110, fov: 40 }}
       >
         <color attach="background" args={["#fe9bcb"]} />
-        <Perf />
+        {/* <Perf /> */}
         <spotLight position={[10, 10, 10]} intensity={1} />
         <Suspense fallback={null}>
           <Environment preset="sunset" />
           {/* {Array.from({ length: count }, (_, i) => (
             <Star key={i} z={(-i / count) * depth} animate={animate} />
           ))} */}
-          <Stars count={count} depth={depth} animate={animate} />
+          <Stars depth={depth} animate={animate} />
           <EffectComposer>
             {/* <DepthOfField
               focusDistance={1.5}
