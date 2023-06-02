@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, Environment, Instances, Instance } from "@react-three/drei";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
@@ -42,19 +42,20 @@ import { Perf } from "r3f-perf";
 //   );
 // }
 
-function Stars({ dark, depth, animate }) {
+function Stars({ theme, depth, animate }) {
   const { nodes, materials } = useGLTF("/kirbyStar-transformed.glb");
   const { size, viewport, camera } = useThree();
   const count = Math.round(size.width / 35);
   let starColor;
   let starEmissive;
-  if (dark) {
-    starColor = "white";
-    starEmissive = "yellow";
-  } else {
-    starColor = "yellow";
-    starEmissive = "orange";
-  }
+  // if (theme === "dark") {
+  // } else {
+  //   starColor = "yellow";
+  //   starEmissive = "orange";
+  // }
+  starColor = "white";
+  starEmissive = "yellow";
+
   let data = [];
   for (let i = 0; i < count; i++) {
     const z = (-i / count) * depth;
@@ -108,8 +109,10 @@ function Star({ animate, ...props }) {
       starRef.current.position.set(data.x * width, (data.y += delta / 3), z);
       if (data.y > height) data.y = -height;
     }
+    useEffect(() => {
+      console.log("wavy");
+    }, [window.localStorage.getItem("theme")]);
   });
-
   return (
     <group {...props}>
       <Instance ref={starRef} />
@@ -118,20 +121,35 @@ function Star({ animate, ...props }) {
 }
 
 export default function FloatingStars({ depth = 30 }) {
-  const [animate, setAnimate] = useState(true);
-  const [dark, setDark] = useState(false);
-  const toggleAnimation = (animate) => {
-    setAnimate(!animate);
-  };
-  const toggleDarkmode = (dark) => {
-    setDark(!dark);
-  };
+  const [animate, setAnimate] = useState(false);
+  // const [theme, setTheme] = useState(null);
+  // if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+  //   useEffect(() => {
+  //     setTheme(localStorage.getItem("theme"));
+  //     console.log(theme);
+  //   });
+  // }
+  const theme = window.localStorage.getItem("theme");
+  // useEffect(() => {
+  //   setTheme(window.localStorage.getItem("theme"));
+  //   console.log(theme);
+  // }, []);
+  // const [dark, setDark] = useState(
+  //   document.documentElement.classList.contains("dark")
+  // );
+  // if (document.documentElement.classList.contains("dark")) setDark(true);
+  // console.log(dark);
+  // const toggleAnimation = (animate) => {
+  //   setAnimate(!animate);
+  // };
+  // const toggleDarkmode = (dark) => {
+  //   setDark(!dark);
+  // };
 
   return (
-    <div
-      className={dark ? "experience-container dark" : "experience-container"}
-    >
-      <div className="settings-container">
+    // <div className={dark ? "content-container dark" : "content-container"}>
+    <div className="content-container">
+      {/* <div className="settings-container">
         <button
           className="animate-button settings-button"
           onClick={() => toggleAnimation(animate)}
@@ -152,6 +170,7 @@ export default function FloatingStars({ depth = 30 }) {
         </button>
         <button
           className="darkmode-button settings-button"
+          id="darkmode-button"
           onClick={() => toggleDarkmode(dark)}
         >
           <div className="settings-button-text">
@@ -178,22 +197,22 @@ export default function FloatingStars({ depth = 30 }) {
             )}
           </div>
         </button>
-      </div>
+      </div> */}
 
       <Canvas
         style={{ width: "100vw", height: "100vh" }}
         gl={{ alpha: false }}
         camera={{ near: 0.01, far: 110, fov: 40 }}
       >
-        {dark ? (
-          <color attach="background" args={["#394b9d"]} />
+        {theme === "dark" ? (
+          <color attach="background" args={["#1b244b"]} />
         ) : (
           <color attach="background" args={["#fe9bcb"]} />
         )}
         {/* <Perf /> */}
         <spotLight position={[10, 10, 10]} intensity={1} />
         <Suspense fallback={null}>
-          {dark ? (
+          {theme === "dark" ? (
             <Environment preset="night" />
           ) : (
             <Environment preset="sunset" />
@@ -201,7 +220,7 @@ export default function FloatingStars({ depth = 30 }) {
           {/* {Array.from({ length: count }, (_, i) => (
             <Star key={i} z={(-i / count) * depth} animate={animate} />
           ))*/}
-          <Stars dark={dark} depth={depth} animate={animate} />
+          <Stars depth={depth} animate={animate} />
           <EffectComposer>
             {/* <DepthOfField
               focusDistance={1.5}

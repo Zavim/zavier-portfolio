@@ -9,12 +9,12 @@
       <button on:click={() => (showAbout = false)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          stroke="hsl(331, 80%, 60%)"
           width="1.25em"
           height="1.25em"
           viewBox="0 0 16 12"
         >
           <path
+            class="close-icon"
             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
           />
         </svg>
@@ -116,12 +116,12 @@
       <button on:click={() => (showExp = false)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          stroke="hsl(331, 80%, 60%)"
           width="1.25em"
           height="1.25em"
           viewBox="0 0 16 12"
         >
           <path
+            class="close-icon"
             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
           />
         </svg>
@@ -208,6 +208,7 @@
       >
         <desc>GitHub logo</desc>
         <path
+          class="svg-icon"
           d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0
     0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07
     5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65
@@ -272,7 +273,7 @@
     position: absolute;
     overflow-y: scroll;
     scrollbar-color: hsl(331, 80%, 60%) transparent;
-    background-color: hsl(60, 100%, 94%);
+    background-color: var(--beige);
     border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0.25rem 0.25rem hsl(331, 60%, 40%);
@@ -294,13 +295,20 @@
     position: sticky;
     top: 0;
     width: 2rem;
-    background-color: hsl(60, 100%, 94%);
+    background-color: var(--beige);
   }
   .close-container > button {
     position: absolute;
-    background-color: hsl(60, 100%, 94%);
+    background-color: var(--beige);
     border-radius: 5px;
     padding: 0 0.25em 0;
+  }
+  .close-icon {
+    stroke: hsl(331, 80%, 60%);
+    fill: hsl(331, 80%, 60%);
+  }
+  .svg-icon {
+    fill: black;
   }
   .button-list {
     display: flex;
@@ -375,7 +383,80 @@
     font-size: 1rem;
   }
   .close-container > button:active {
-    background-color: hsl(60, 100%, 94%);
+    background-color: var(--beige);
+  }
+
+  :global(.dark) a {
+    /* color: hsl(60, 100%, 50%); */
+    color: hsl(60, 100%, 94%);
+  }
+  :global(.dark) .experience-container {
+    border-left: solid 1px hsl(60, 100%, 94%);
+  }
+  :global(.dark) .about-container,
+  :global(.dark) .experience-container {
+    scrollbar-color: hsl(40, 100%, 67%) transparent;
+    background-color: hsl(230, 46%, 25%);
+    box-shadow: 0.25rem 0.25rem hsl(155, 100%, 66%);
+    /* box-shadow: 0.25rem 0.25rem hsl(15, 79%, 50%); */
+  }
+  :global(.dark) .experience-container {
+    border-left: solid 1px hsl(155, 100%, 66%);
+  }
+  :global(.dark) .close-container > button {
+    background-color: hsl(230, 46%, 25%);
+  }
+  :global(.dark) .experience-list > li::marker {
+    color: hsl(155, 100%, 66%);
+  }
+  :global(.dark) hr {
+    color: hsl(155, 100%, 66%);
+  }
+  :global(.dark) .learning-list > a {
+    color: hsl(60, 100%, 94%);
+    box-shadow: 4px 4px hsl(40, 100%, 67%);
+  }
+  :global(.dark) button {
+    color: hsl(60, 100%, 94%);
+    box-shadow: 4px 4px hsl(40, 100%, 67%);
+  }
+  :global(.dark) button:hover,
+  :global(.dark) .link:hover {
+    background-color: hsl(230, 46%, 5%);
+    outline: 1px solid hsl(40, 100%, 67%);
+  }
+  :global(.dark) .link {
+    color: hsl(60, 100%, 94%);
+    box-shadow: 4px 4px hsl(40, 100%, 67%);
+  }
+  :global(.dark) button:hover,
+  :global(.dark) .link:hover {
+    background-color: hsl(230, 46%, 5%);
+    outline: 1px solid hsl(40, 100%, 67%);
+    box-shadow: none;
+  }
+  :global(.dark) button:active,
+  .link:active {
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(40, 100%, 67%);
+  }
+  :global(.dark) .svg-icon {
+    fill: white;
+  }
+  :global(.dark) .close-icon {
+    stroke: white;
+    fill: white;
+  }
+  :global(.dark) a > img:hover {
+    outline: 3px solid hsl(155, 100%, 66%);
+  }
+  :global(.dark) .close-container > button:active {
+    background-color: hsl(230, 46%, 5%);
+  }
+  :global(.dark) button:active,
+  :global(.dark) .link:active {
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(40, 100%, 67%);
   }
 
   @media (max-width: 35em) {
