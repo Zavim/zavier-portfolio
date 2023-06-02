@@ -128,9 +128,7 @@ export default function FloatingStars({ depth = 30 }) {
   };
 
   return (
-    <div
-      className={dark ? "experience-container dark" : "experience-container"}
-    >
+    <div className={dark ? "content-container dark" : "content-container"}>
       <div className="settings-container">
         <button
           className="animate-button settings-button"
