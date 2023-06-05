@@ -295,7 +295,6 @@
     position: sticky;
     top: 0;
     width: 2rem;
-    background-color: var(--beige);
   }
   .close-container > button {
     position: absolute;
