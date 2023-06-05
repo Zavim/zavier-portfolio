@@ -396,6 +396,7 @@
   :global(.dark) .experience-container {
     scrollbar-color: hsl(40, 100%, 67%) transparent;
     background-color: hsl(230, 46%, 25%);
+    border: solid 1px hsl(155, 100%, 66%);
     box-shadow: 0.25rem 0.25rem hsl(155, 100%, 66%);
     /* box-shadow: 0.25rem 0.25rem hsl(15, 79%, 50%); */
   }
@@ -417,6 +418,7 @@
   }
   :global(.dark) button {
     color: hsl(60, 100%, 94%);
+    /* outline: 1px solid hsl(40, 100%, 67%); */
     box-shadow: 4px 4px hsl(40, 100%, 67%);
   }
   :global(.dark) button:hover,
@@ -476,9 +478,6 @@
       right: 0;
       border-left: none;
       border-top: solid 1px hsl(331, 98%, 80%);
-    }
-    :global(.dark) .experience-container {
-      border-top: solid 1px hsl(155, 100%, 66%);
     }
     .about-content > ul > li,
     .projects-content > ul > li {
