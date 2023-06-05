@@ -452,6 +452,9 @@
   :global(.dark) .close-container > button:active {
     background-color: hsl(230, 46%, 5%);
   }
+  :global(.dark) .close-container > button {
+    outline: 1px solid hsl(40, 100%, 67%);
+  }
   :global(.dark) button:active,
   :global(.dark) .link:active {
     color: hsl(0, 0%, 0%);
@@ -473,6 +476,9 @@
       right: 0;
       border-left: none;
       border-top: solid 1px hsl(331, 98%, 80%);
+    }
+    :global(.dark) .experience-container {
+      border-top: solid 1px hsl(155, 100%, 66%);
     }
     .about-content > ul > li,
     .projects-content > ul > li {
