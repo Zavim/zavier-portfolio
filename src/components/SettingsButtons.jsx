@@ -1,9 +1,11 @@
-import { useState } from "react";
 import { useStore } from "@nanostores/react";
 import { isDark } from "../themeStore";
+import { animate } from "../animateStore";
 
 export default function SettingsButtons() {
   const $isDark = useStore(isDark);
+  const $animate = useStore(animate);
+
   const handleDarkmodeToggle = () => {
     const element = document.documentElement;
     element.classList.toggle("dark");
@@ -13,7 +15,10 @@ export default function SettingsButtons() {
 
   return (
     <div className="settings-container">
-      <button className="animate-button settings-button">
+      <button
+        className="animate-button settings-button"
+        onClick={() => animate.set(!$animate)}
+      >
         <div className="settings-button-text">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +30,7 @@ export default function SettingsButtons() {
             <desc>star icon</desc>
             <path
               className="svg-icon"
+              id="star-path"
               fillRule="evenodd"
               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
             ></path>

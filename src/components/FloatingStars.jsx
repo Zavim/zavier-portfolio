@@ -1,62 +1,12 @@
 import * as THREE from "three";
-import {
-  Suspense,
-  useEffect,
-  useMemo,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, Environment, Instances, Instance } from "@react-three/drei";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
 import { Perf } from "r3f-perf";
 import { useStore } from "@nanostores/react";
 import { isDark } from "../themeStore";
-
-// function Star({ z, animate }) {
-//   const starRef = useRef();
-//   const { nodes, materials } = useGLTF("/kirbyStar-transformed.glb");
-//   const { viewport, camera } = useThree();
-//   const { width, height } = viewport.getCurrentViewport(camera, [0, 0, z]);
-
-//   const [data] = useState({
-//     x: THREE.MathUtils.randFloatSpread(2), //this creates a range between -+x/2
-//     y: THREE.MathUtils.randFloatSpread(height),
-//     rX: Math.random() * Math.PI,
-//     rY: Math.random() * Math.PI,
-//     rZ: Math.random() * Math.PI,
-//   });
-
-//   useFrame((_state, delta) => {
-//     if (animate) {
-//       starRef.current.rotation.set(
-//         (data.rX += delta / 2),
-//         (data.rY += delta / 2),
-//         (data.rZ += delta / 2)
-//       );
-//       starRef.current.position.set(data.x * width, (data.y += delta / 3), z);
-//       if (data.y > height) data.y = -height;
-//     }
-//   });
-
-//   return (
-//     <mesh
-//       ref={starRef}
-//       geometry={nodes.Roundcube.geometry}
-//       material={materials.star_material}
-//       material-color="yellow"
-//       material-emissive="orange"
-//     />
-//   );
-// }
-// function ThemeChecker() {
-//   const [theme,] = useState(window.localStorage.getItem("theme"));
-//   useFrame((_state) => {
-//     setTheme(window.localStorage.getItem("theme"));
-//     // console.log(theme);
-//   });
-// }
+import { animate } from "../animateStore";
 
 function Stars({ depth, animate, dark }) {
   const { nodes, materials } = useGLTF("/kirbyStar-transformed.glb");
@@ -135,8 +85,8 @@ function Star({ animate, ...props }) {
 }
 
 export default function FloatingStars({ depth = 30 }) {
-  const [animate, setAnimate] = useState(false);
   const $isDark = useStore(isDark);
+  const $animate = useStore(animate);
 
   return (
     <div className={$isDark ? "content-container dark" : "content-container"}>
@@ -161,7 +111,7 @@ export default function FloatingStars({ depth = 30 }) {
           {/* {Array.from({ length: count }, (_, i) => (
             <Star key={i} z={(-i / count) * depth} animate={animate} />
           ))*/}
-          <Stars depth={depth} animate={animate} dark={$isDark} />
+          <Stars depth={depth} animate={$animate} dark={$isDark} />
           <EffectComposer>
             {/* <DepthOfField
               focusDistance={1.5}
