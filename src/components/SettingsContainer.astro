@@ -1,0 +1,66 @@
+---
+import SettingsButtons from "./SettingsButtons";
+---
+
+<SettingsButtons client:only="react" />
+
+<style is:global>
+  .settings-container {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+  .settings-button {
+    z-index: 50;
+    border: none;
+    background-color: var(--beige);
+    font-family: "vulf mono italic";
+    font-size: 0.9rem;
+    border-radius: 5px;
+    box-shadow: 4px 4px hsl(331, 60%, 40%);
+    transition: transform 0.1s ease-out;
+  }
+  .settings-button:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px hsl(331, 60%, 40%);
+  }
+  .settings-button:active {
+    background-color: hsl(331, 80%, 60%);
+    box-shadow: none;
+  }
+  .animate-button {
+    padding: 0.25em 0.2em;
+  }
+  .settings-button-text {
+    display: flex;
+    align-items: center;
+  }
+  .settings-button-text svg {
+    padding: 0.25em 0.5em;
+  }
+  .darkmode-button {
+    /* top: 10%;
+    right: 5%; */
+    margin-left: 1rem;
+    padding: 0.25em 0.2em;
+  }
+
+  .svg-icon {
+    fill: black;
+  }
+
+  :global(.dark) .svg-icon {
+    fill: white;
+  }
+  :global(.dark) .settings-button {
+    background-color: hsl(229, 47%, 42%);
+    box-shadow: 4px 4px hsl(155, 100%, 66%);
+  }
+  :global(.dark) .settings-button:hover {
+    background-color: hsl(230, 46%, 5%);
+    outline: 1px solid hsl(40, 100%, 67%);
+  }
+  :global(.dark) .settings-button:active {
+  }
+</style>
