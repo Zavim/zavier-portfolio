@@ -4,7 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 import FloatingStars from "../components/FloatingStars.jsx";
 import Popouts from "../components/popouts.svelte";
-import SettingsButtons from "../components/SettingsButtons.astro";
+import SettingsContainer from "../components/SettingsContainer.astro";
 
 const beige = "hsl(60, 100%, 94%)";
 const blue = "hsl(229, 47%, 42%)";
@@ -25,7 +25,7 @@ const darkBlue = "#070913";
     <h3>Web Engineer</h3>
     <Popouts client:load />
   </div>
-  <SettingsButtons />
+  <SettingsContainer />
   <!-- <div class="grainy-container"> -->
   <FloatingStars client:only="react" />
   <!-- </div> -->
@@ -69,6 +69,21 @@ const darkBlue = "#070913";
   }
   .dark img {
     border: solid 1px hsl(155, 100%, 66%);
+  }
+  .dark .svg-icon {
+    fill: white;
+  }
+  .dark .settings-button {
+    background-color: hsl(229, 47%, 42%);
+    box-shadow: 4px 4px hsl(155, 100%, 66%);
+  }
+  .dark .settings-button:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px hsl(155, 100%, 66%);
+  }
+  .dark .settings-button:active {
+    background-color: hsl(230, 46%, 5%);
+    box-shadow: none;
   }
   body {
     line-height: 1.5em;
