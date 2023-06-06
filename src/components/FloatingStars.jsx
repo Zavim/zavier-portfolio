@@ -96,33 +96,32 @@ export default function FloatingStars({ depth = 30 }) {
         camera={{ near: 0.01, far: 110, fov: 40 }}
       >
         {$isDark ? (
-          <color attach="background" args={["#1b244b"]} />
+          <color attach="background" args={["#0e1226"]} />
         ) : (
           <color attach="background" args={["#fe9bcb"]} />
         )}
         {/* <Perf /> */}
         <spotLight position={[10, 10, 10]} intensity={1} />
         <Suspense fallback={null}>
-          {/* {theme === "dark" ? (
+          {$isDark ? (
             <Environment preset="night" />
           ) : (
             <Environment preset="sunset" />
-          )} */}
+          )}
           {/* {Array.from({ length: count }, (_, i) => (
             <Star key={i} z={(-i / count) * depth} animate={animate} />
           ))*/}
           <Stars depth={depth} animate={$animate} dark={$isDark} />
           <EffectComposer>
             {/* <DepthOfField
-              focusDistance={1.5}
               focalLength={1}
               bokehScale={2}
               // height={700}
             /> */}
             <DepthOfField
-              target={[0, 0, depth / 2]}
+              focusDistance={1.2}
               focalLength={0.1}
-              bokehScale={2}
+              bokehScale={3}
               height={700}
             />
           </EffectComposer>

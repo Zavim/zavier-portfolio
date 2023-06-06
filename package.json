@@ -17,7 +17,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/svelte": "^1.0.2",
     "@nanostores/react": "^0.7.1",
-    "@react-three/drei": "9.32",
+    "@react-three/drei": "^9.74.4",
     "@react-three/fiber": "8.8",
     "@react-three/postprocessing": "^2.7.0",
     "@types/react": "^18.0.24",

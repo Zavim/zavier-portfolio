@@ -23,7 +23,7 @@
     <div class="about-content">
       <h1>About Zavier</h1>
       <ul>
-        <li>I am a web engineer from Cleveland, Ohio!</li>
+        <li>I am a creative frontend engineer from Cleveland, Ohio!</li>
         <li>
           I leverage my fine arts background to create attractive and responsive
           UIs with React and TypeScript.
@@ -360,12 +360,9 @@
   }
   button:hover,
   .link:hover {
-    /* border: 1px hsl(331, 80%, 60%);
-    border-radius: 5px; */
     background-color: hsl(27, 100%, 94%);
     transform: translate(4px, 4px);
     outline: 1px solid hsl(331, 80%, 60%);
-    /* box-shadow: 1px 1px hsl(331, 80%, 60%); */
     box-shadow: none;
   }
   button:active,
@@ -386,7 +383,6 @@
   }
 
   :global(.dark) a {
-    /* color: hsl(60, 100%, 50%); */
     color: hsl(60, 100%, 94%);
   }
   :global(.dark) .experience-container {
@@ -396,21 +392,21 @@
   :global(.dark) .experience-container {
     scrollbar-color: hsl(40, 100%, 67%) transparent;
     background-color: hsl(230, 46%, 25%);
-    border: solid 1px hsl(155, 100%, 66%);
-    box-shadow: 0.25rem 0.25rem hsl(155, 100%, 66%);
-    /* box-shadow: 0.25rem 0.25rem hsl(15, 79%, 50%); */
+    border-top: solid 1px var(--lavender);
+    border-left: solid 1px var(--lavender);
+    box-shadow: 0.25rem 0.25rem var(--lavender);
   }
   :global(.dark) .experience-container {
-    border-left: solid 1px hsl(155, 100%, 66%);
+    border-left: solid 1px var(--lavender);
   }
   :global(.dark) .close-container > button {
     background-color: hsl(230, 46%, 25%);
   }
   :global(.dark) .experience-list > li::marker {
-    color: hsl(155, 100%, 66%);
+    color: var(--lavender);
   }
   :global(.dark) hr {
-    color: hsl(155, 100%, 66%);
+    color: var(--lavender);
   }
   :global(.dark) .learning-list > a {
     color: hsl(60, 100%, 94%);
@@ -418,7 +414,6 @@
   }
   :global(.dark) button {
     color: hsl(60, 100%, 94%);
-    /* outline: 1px solid hsl(40, 100%, 67%); */
     box-shadow: 4px 4px hsl(40, 100%, 67%);
   }
   :global(.dark) button:hover,
@@ -449,7 +444,7 @@
     fill: white;
   }
   :global(.dark) a > img:hover {
-    outline: 3px solid hsl(155, 100%, 66%);
+    outline: 3px solid var(--lavender);
   }
   :global(.dark) .close-container > button:active {
     background-color: hsl(230, 46%, 5%);
@@ -465,7 +460,6 @@
 
   @media (max-width: 35em) {
     .about-container {
-      /* max-width: 10rem; */
       top: -60%;
       left: 0;
       height: 55vh;

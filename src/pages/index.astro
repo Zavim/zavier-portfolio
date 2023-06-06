@@ -7,7 +7,8 @@ import Popouts from "../components/popouts.svelte";
 import SettingsContainer from "../components/SettingsContainer.astro";
 
 const beige = "hsl(60, 100%, 94%)";
-const blue = "hsl(229, 47%, 42%)";
+const lavender = "hsl(249, 70%, 83%)";
+// const neonGreen = "hsl(155, 100%, 66%)"
 const darkBlue = "#070913";
 ---
 
@@ -22,7 +23,7 @@ const darkBlue = "#070913";
   <div class="content-card">
     <div class="zavi-pic"></div>
     <h1>Zavier McLean</h1>
-    <h3>Web Engineer</h3>
+    <h3>Frontend Engineer</h3>
     <Popouts client:load />
   </div>
   <SettingsContainer />
@@ -45,7 +46,7 @@ const darkBlue = "#070913";
   </filter>
 </svg> -->
 
-<style is:global define:vars={{ beige, darkBlue }}>
+<style is:global define:vars={{ beige, darkBlue, lavender }}>
   @font-face {
     font-family: "vulf mono bold";
     src: url("../../fonts/mono/Vulf_Mono-Bold_web.ttf") format("truetype");
@@ -65,21 +66,21 @@ const darkBlue = "#070913";
   }
   .dark .content-card {
     background-color: hsl(230, 46%, 25%);
-    box-shadow: 4px 4px hsl(155, 100%, 66%);
+    box-shadow: 4px 4px var(--lavender);
   }
   .dark img {
-    border: solid 1px hsl(155, 100%, 66%);
+    border: solid 1px var(--lavender);
   }
   .dark .svg-icon {
     fill: white;
   }
   .dark .settings-button {
     background-color: hsl(229, 47%, 42%);
-    box-shadow: 4px 4px hsl(155, 100%, 66%);
+    box-shadow: 4px 4px var(--lavender);
   }
   .dark .settings-button:hover {
     transform: translate(4px, 4px);
-    box-shadow: 1px 1px hsl(155, 100%, 66%);
+    box-shadow: 1px 1px var(--lavender);
   }
   .dark .settings-button:active {
     background-color: hsl(230, 46%, 5%);
@@ -88,7 +89,6 @@ const darkBlue = "#070913";
   body {
     line-height: 1.5em;
     height: 100%;
-    /* background-color: #fe9bcb; */
   }
   img {
     max-width: 100%;
@@ -107,10 +107,6 @@ const darkBlue = "#070913";
     padding-bottom: 1.5rem;
     font-family: "vulf mono italic";
   }
-  /* .dark {
-    background-color: hsl(229, 47%, 25%);
-    color: hsl(60, 100%, 94%);
-  } */
   .content-container::before,
   .content-container::after {
     position: absolute;
