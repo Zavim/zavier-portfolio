@@ -11,7 +11,7 @@ import { animate } from "../animateStore";
 function Stars({ depth, animate, dark }) {
   const { nodes, materials } = useGLTF("/kirbyStar-transformed.glb");
   const { size, viewport, camera } = useThree();
-  const count = Math.round(size.width / 35);
+  const count = Math.min(Math.round(size.width / 35), 55);
   let starColor;
   let starEmissive;
 
