@@ -19,7 +19,7 @@
     "@nanostores/react": "^0.7.1",
     "@react-three/drei": "^9.74.4",
     "@react-three/fiber": "8.8",
-    "@react-three/postprocessing": "^2.7.0",
+    "@react-three/postprocessing": "^2.14.0",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "astro": "^1.6.0",

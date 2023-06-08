@@ -3,7 +3,7 @@ import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, Environment, Instances, Instance } from "@react-three/drei";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
-import { Perf } from "r3f-perf";
+// import { Perf } from "r3f-perf";
 import { useStore } from "@nanostores/react";
 import { isDark } from "../themeStore";
 import { animate } from "../animateStore";
